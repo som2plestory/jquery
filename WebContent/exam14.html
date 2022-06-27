@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+
+</body>
+
+<script type="text/javascript">
+//하나하나 써야해서 비효율적이야 - 늘어날 때 마다 만들 수 없어
+/*
+$("#first").on("click", function(){
+	var str = $("#first").text()
+	console.log(str)
+})
+
+$("#second").on("click", function(){
+	var str = $("#second").text()
+	console.log(str)
+})
+
+$("#third").on("click", function(){
+	var str = $("#third").text()
+	console.log(str)
+})
+*/
+
+//$(this): 지금 클릭한 애
+// $this = $(this) : 변수 주는 관례
+$("li").on("click", function(){
+	var $this = $(this)
+	
+	//text 가져오기
+	var str = $this.text()
+	console.log(str)
+	
+	//class 이름 가져오기
+	var cName = $this.attr("class")
+	console.log(cName)
+	
+	//id 가져오기
+	var idName = $this.attr("id")
+	console.log(idName)
+	
+})
+
+</script>
+
+
+</html>

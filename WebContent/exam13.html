@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		
+		<button id="btn" type="button">js테스트 버튼</button>
+		
+		<h3 id="display">이름출력 영역</h3>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+
+//$("'button").text("이지히")
+//$("[type='button'").text("이지히")
+//$("#btn").text("이지히")
+
+//dbclick: 더블클릭
+//mouseleave": 마우스가 떠났을 때
+
+$("#btn").on("click", function(){
+	console.log("클릭")
+	
+	/*
+	var tag = $("#display")
+	tag.html("<font color='red'>라니아</font>")
+	*/
+	
+	//$("#display").html("<font color='red'>라니아</font>")
+	$("#display").text("라니아")
+	$("#display").css("color", "red")
+})
+
+//h3태그를 클릭했을때
+$("#display").on("click", function(){
+	console.log("h3 클릭")
+})
+
+</script>
+
+</html>
